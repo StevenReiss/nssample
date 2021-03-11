@@ -1,0 +1,24 @@
+<Page loaded="pageLoaded" class="page"
+    xmlns="http://www.nativescript.org/tns.xsd">
+    <ActionBar title="Cdlist" class="action-bar">
+    </ActionBar>
+
+    <ScrollView>
+        <StackLayout class="home-panel">
+            <Label text="CD Results" />
+            <TextField text="{{ songtitle }}" editable="false"
+                hint="Enter song title..." />
+            <ListView items="{{ cds }}" itemTap="{{ onItemTap }}"
+                style="height:1250px">
+                <ListView.itemTemplate >
+                    <StackLayout>
+                        <Label text="{{ title }}" class="cdtitle" textWrap='true'
+                            horizontalAlignment="left" />
+                        <Label text="{{ artist }}" class='cdartist' textWrap='true'
+                            horizontalAlignment="center" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</Page>

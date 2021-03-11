@@ -1,0 +1,17 @@
+<Page loaded="pageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
+
+    <ActionBar title="Home">
+    </ActionBar>
+    <ScrollView>
+        <StackLayout class="home-panel">
+            <Label textWrap="true" text="CD FINDER"
+                class="h1 description-label" />
+            <Label textWrap="true" text="Enter song title to find CDs:"
+                class="h2 prompt-label" />
+            <TextField text="{{ textFieldValue }}" class='song-input'
+                hint="Enter song title..." />
+            <Button class='find-button' text="Find CDs with this Song"
+                tap="{{ onButtonTap }}" />
+        </StackLayout>
+    </ScrollView>
+</Page>

@@ -1,0 +1,23 @@
+<Page loaded="pageLoaded" class="page"
+    xmlns="http://www.nativescript.org/tns.xsd">
+    <ActionBar title="Tracks" class="action-bar">
+    </ActionBar>
+
+    <ScrollView>
+        <StackLayout class="home-panel">
+            <Label text="Track Results" />
+            <TextField text="{{ cdtitle }}" editable="false" />
+            <ListView items="{{ tracks }}" 
+                style="height:1250px">
+                <ListView.itemTemplate>
+                    <StackLayout>
+                        <Label text="{{ name }}" class="cdtitle" textWrap='true'
+                            horizontalAlignment="left" />
+                        <Label text="{{ artist }}" class='cdartist' textWrap='true'
+                            horizontalAlignment="center" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</Page>
